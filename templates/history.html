@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+    <table class="table">
+        <tr>
+            <th>USER</th>
+            <th>PRICE</th>
+            <th>DATE</th>
+            <th>QUANTITY</th>
+            <th>TICKER</th>
+        </tr>
+
+        {% for dict_item in usershistory %}
+            <tr>
+                {% for key, value in dict_item.items() %}
+                    <th>{{value}}</th>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
+
